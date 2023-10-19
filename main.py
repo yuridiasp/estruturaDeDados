@@ -1,3 +1,5 @@
+from arvore.arvore import Arvore
+from arvore.no_arvore_inteiro import NoArvoreInteiro
 from mapas import mapa
 from conjuntos import conjunto
 from filas import fila
@@ -6,12 +8,6 @@ from listas import lista_duplamente_ligada
 from listas import lista_ligada
 from listas import desafio_13_14
 from vetores import vetor
-
-# vetores_inteiros = array("b",[1, 2, 3])
-# print(vetores_inteiros)
-# vetores_inteiros.insert(3, 4)
-# print(vetores_inteiros)
-# print(vetores_inteiros.index(2))
 
 print(30 * "-", "[ Menu ]", 30 * "-")
 print("1. Vetores")
@@ -29,7 +25,6 @@ menu = int(input("Digite opção desejada: "))
 
 if menu == 1:
     vetor_teste = vetor.Vetor(3)
-    # vetor_teste.inserir_elemento_posicao(1, 0)
     vetor_teste.inserir_elemento_final(1)
     vetor_teste.inserir_elemento_final(2)
     vetor_teste.inserir_elemento_final(3)
@@ -97,6 +92,13 @@ if menu == 9:
     mapa_teste.adicionar("impar", 3)
     print(mapa_teste)
 if menu == 10:
-    pass
+    arvore_teste = Arvore()
+    print(arvore_teste)
+    arvore_teste.inserir_elemento(NoArvoreInteiro(3))
+    print(arvore_teste)
+    arvore_teste.inserir_elemento(NoArvoreInteiro(1))
+    print(arvore_teste)
+    arvore_teste.inserir_elemento(NoArvoreInteiro(4))
+    print(arvore_teste)
 else:
     print("Opção Inválida")
